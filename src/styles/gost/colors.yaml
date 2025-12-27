@@ -1,0 +1,6 @@
+variables:
+  linkcolor: "blue!70!black"
+  citecolor: "green!50!black"
+  urlcolor: "magenta!50!black"
+  # Можно добавить кастомные цвета для LaTeX
+  gost-gray: "0.95,0.95,0.95"

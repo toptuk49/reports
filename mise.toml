@@ -1,45 +1,18 @@
 [tools]
-python = "3.11"
-node = "22"
-pnpm = "10.17.1"
-poetry = "1.8.4"
 pandoc = "3.8.3"
 
 [tasks]
-setup = "pnpm install && poetry install"
-
 clean = """
-  rm -rf dist/* 2>/dev/null || true
-  rmdir /s /q dist 2>/dev/null || true
-"""
-
-preprocess = """
-  python scripts/preprocess.py src/index.md src-processed
+  rm -rf dist/*
 """
 
 build-pdf = """
   pandoc src/index.md \
     --defaults=config/pandoc/base.yaml \
+    --defaults=src/styles/gost/variables.yaml \
+    --defaults=src/styles/gost/typography.yaml \
+    --defaults=src/styles/gost/geometry.yaml \
     --defaults=config/pandoc/pdf.yaml \
+    --metadata-file=src/content/metadata.yaml \
     -o dist/document.pdf
-"""
-
-build-docx = """
-  pandoc src/index.md \
-    --defaults=config/pandoc/base.yaml \
-    --defaults=config/pandoc/docx.yaml \
-    -o dist/document.docx
-"""
-
-build-all = "clean && build-pdf && build-docx"
-
-dev-pdf = "build-pdf && open dist/document.pdf"
-dev-docx = "build-docx && open dist/document.docx"
-
-watch = """
-  watchexec \
-    -w src \
--w config \
--e md,yaml,tex \
--- "mise run build-pdf"
 """

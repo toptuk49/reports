@@ -1,0 +1,24 @@
+% Основная надпись ГОСТ 19.104-78
+\newcommand{\maininscription}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west,
+          xshift=10mm,
+          yshift=-10mm,
+          fill=white,
+          inner sep=0pt,
+          draw=black,
+          line width=0.5pt,
+          font=\footnotesize] 
+      at (current page.north west) {
+      \begin{tabular}{|p{45mm}|p{25mm}|p{20mm}|}
+        \hline
+        \textbf{Код документа} & \textbf{Подпись} & \textbf{Дата} \\
+        \hline
+        А.В.00001-01 33 01 & & \\
+        \hline
+      \end{tabular}
+    };
+  \end{tikzpicture}
+}
+
+\newcommand{\showmaininscription}{\maininscription}

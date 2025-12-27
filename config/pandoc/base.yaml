@@ -1,22 +1,12 @@
 from: markdown+smart
 standalone: true
 resource-path:
-  - assets
-  - src
+  - src/content
+  - src/assets
 
 number-sections: true
 toc: true
 toc-depth: 3
 
 filters:
-  - pandoc-crossref
   - pandoc-include
-
-citeproc: true
-bibliography: src/references.bib
-csl: config/citation-style.csl
-
-variables:
-  mathspec: |
-    \usepackage{amsmath}
-    \usepackage{amssymb}

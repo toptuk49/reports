@@ -1,28 +1,19 @@
 ---
+title: "ПРОГРАММА ОЧИСТКИ ОПЕРАТИВНОЙ ПАМЯТИ"
+subtitle: "Руководство программиста"
+document-code: "А.В.00001-01 33 01"
+date: "2005"
 lang: ru
-
-title: "Document Name"
-author:
-  - Surname Name Patronymic
-
-institute: "University Name"
-date: yyyy-mm-dd
 abstract: |
-  Abstract content...
-  **Keywords:** Pandoc, Markdown, documents.
-keywords: [Pandoc, Markdown, documents]
-geometry: "left=3cm,right=1.5cm,top=2cm,bottom=2cm"
-fontsize: 14pt
-mainfont: "Times New Roman"
-
-bibliography: references.bib
-csl: ../config/citation-style.csl
+  !include src/content/abstract.md
 ---
 
-# Annotation
+!include src/content/chapters/01-introduction.md
 
-!include src/abstract.md
+!include src/content/chapters/02-characteristics.md
 
-# Chapter Name
+!include src/content/chapters/03-usage.md
 
-!include src/chapters/01-chapter-name.md
+!include src/content/chapters/04-data.md
+
+!include src/content/chapters/05-messages.md

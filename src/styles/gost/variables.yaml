@@ -1,0 +1,5 @@
+variables:
+  document-code: "А.В.00001-01 33 01"
+  document-type: "Руководство программиста"
+  include-titlepage: true
+  linestretch: "1.5"
