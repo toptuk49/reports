@@ -1,0 +1,11 @@
+pdf-engine: xelatex
+
+variables:
+  papersize: a4
+  geometry: "left=3cm,right=1.5cm,top=2cm,bottom=2cm"
+  fontsize: 14pt
+  mainfont: "Times New Roman"
+  documentclass: "article"
+  lang: "russian"
+
+template: config/template.tex
